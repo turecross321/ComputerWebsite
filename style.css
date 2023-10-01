@@ -16,7 +16,7 @@ header {
 
 nav {
     display: flex;
-    gap: 8px;
+    overflow-y: auto;
 }
 
 h1, h2, p {
@@ -29,6 +29,7 @@ h1, h2, p {
     text-decoration: none;
     outline: solid 1px;
     border-radius: 4px;
+    margin: 2px;
 }
 
 .nav-link:link, .nav-link:visited {
