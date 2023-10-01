@@ -23,27 +23,26 @@ h1, h2, p {
     margin: 0;
 }
 
-#nav-link {
+.nav-link {
     padding: 8px;
     transition: all 250ms;
     text-decoration: none;
-    outline: solid;
-    outline-width: 1px;
+    outline: solid 1px;
     border-radius: 4px;
 }
 
-#nav-link:link, #nav-link:visited {
+.nav-link:link, .nav-link:visited {
     color: rgb(170, 28, 109);
 }
 
-#nav-link:hover {
+.nav-link:hover {
     color: rgb(255, 255, 255);
     outline: dotted;
 }
 
 #container {
     position: relative;
-    min-height: 82vh;
+    min-height: 100vh;
 }
 
 #content-wrap {
