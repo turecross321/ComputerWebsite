@@ -8,7 +8,7 @@ async function init() {
     goToPage(0);
 }
 
-const pageContentsDir = "../page_contents/";
+const pageContentsDir = "page_contents/";
 let pageContents = [];
 async function load_pages() {
     for (let i = 0; i < navButtons.length; i++) {
