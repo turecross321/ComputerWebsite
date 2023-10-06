@@ -1,9 +1,12 @@
 let navButtons;
 let contentParent;
+let originalDocTitle;
 
 async function init() {
     navButtons = document.getElementsByClassName("nav-button");
     contentParent = document.getElementById("content-parent");
+    originalDocTitle = document.title;
+
     await load_pages();
     goToPage(0);
 }
@@ -26,6 +29,7 @@ function goToPage(pageIndex) {
 
     currentPage = pageIndex;
     contentParent.innerHTML = pageContents[currentPage];
+    document.title = originalDocTitle + " - " + navButtons[currentPage].innerHTML;
 
     navButtons[currentPage].classList.add("nav-button-selected");
 }
