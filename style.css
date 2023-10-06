@@ -32,25 +32,38 @@ h1, h2, p, body {
     margin: 0;
 }
 
-.nav-link {
+button {
+    font-family: inherit;
+    font-size: 1em;
+}
+
+.nav-button {
     padding: 8px;
-    transition: all 250ms;
+    transition: all 125ms;
     text-decoration: none;
-    outline: solid 1px;
     border-radius: 4px;
-    margin: 2px;
     height: fit-content;
     width: fit-content;
     white-space: nowrap;
+    background: none;
+    color: rgb(137, 190, 31);;
+
+    /* using an outline instead of a border here to the avoid element changing size when
+    outline type is changed */
+    outline: solid 1px;
+    outline-color: rgb(137, 190, 31);
+    border: none;
+    margin: 2px;
 }
 
-.nav-link:link, .nav-link:visited {
-    color: rgb(137, 190, 31);
-}
-
-.nav-link:hover {
+.nav-button:hover {
     color: rgb(255, 255, 255);
     outline: dotted;
+}
+
+.nav-button-selected {
+    transition: all 125ms;
+    outline: ridge; 
 }
 
 #container {
@@ -58,7 +71,7 @@ h1, h2, p, body {
     min-height: 100vh;
 }
 
-#content-wrap {
+#content-parent {
     padding-bottom: 2.5rem;
     margin: 16px;
     display: flex;
@@ -69,6 +82,10 @@ main {
     background-color: rgb(1, 23, 22);
     padding: 16px;
     border-radius: 8px;
+}
+
+#primary-main {
+    width: 100%;
 }
 
 iframe {
@@ -91,7 +108,7 @@ footer {
 }
 
 @media screen and (max-width: 600px) {
-    #content-wrap {
+    #content-parent {
         flex-direction: column;
     }
     

@@ -11,38 +11,22 @@
       href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@500&display=swap"
       rel="stylesheet"
     />
+    <script src="/js/routing.js"></script>
   </head>
-  <body>
+  <body onload="init()">
     <div id="header-and-nav">
       <header>
         <h1>Datorns Uppbyggnad</h1>
       </header>
       <nav>
-        <a href="index.html" class="nav-link">Startsida</a>
+        <button onclick="goToPage(0)" class="nav-button">Startsida</button>
         <div class="vertical-divider"></div>
-        <a href="motherboard.html" class="nav-link">Moderkort</a>
-        <a href="cpu.html" class="nav-link">Processor</a>
-        <a href="ram.html" class="nav-link">RAM-minne</a>
-        <a href="gpu.html" class="nav-link">Grafikkort</a>
-        <a href="storage.html" class="nav-link">Lagring</a>
-        <a href="psu.html" class="nav-link">Nätaggregat</a>
-        <a href="case.html" class="nav-link">Chassi</a>
+        <button onclick="goToPage(1)" class="nav-button">Moderkort</button>
       </nav>
     </div>
 
     <div id="container">
-      <div id="content-wrap">
-        <main>
-          <h2>Startsida</h2>
-          <p>En dator är, enligt definitionen, en maskin som kan ta emot indata och ge tillbaka utdata som har blivit bearbetad. 
-            Datorer är en extremt viktig del i samhället - vi alla använder oss av dem varje dag - 
-            men trots det vet inte de flesta hur en dator fungerar. 
-            Denna hemsidan har med mål att beskriva varje del i en modern, stationär, dator.</p>
-        </main>
-
-        <main>
-          <img src="./assets/pc.png">
-        </main>
+      <div id="content-parent">
       </div>
       <footer>ture - 2023</footer>
     </div>
