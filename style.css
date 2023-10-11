@@ -63,7 +63,7 @@ button {
 
 .nav-button-selected {
     transition: all 125ms;
-    outline: ridge; 
+    outline: ridge 4px;  
 }
 
 #container {
@@ -76,6 +76,27 @@ button {
     margin: 16px;
     display: flex;
     gap: 16px;
+
+    animation-duration: 1000ms;
+    animation-name: slide-in;
+    animation-iteration-count: 1;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes slide-in {
+    from {
+        position: fixed;
+        transform: translateY(100%);
+        opacity: 0%;
+    }
+    to {
+        transform: translateY(0%);
+        opacity: 100%;
+        position: relative  ;
+    }
 }
 
 main {

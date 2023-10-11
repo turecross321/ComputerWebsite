@@ -7,8 +7,10 @@ async function init() {
     contentParent = document.getElementById("content-parent");
     originalDocTitle = document.title;
 
+    contentParent.classList.add("hidden");
     await load_pages();
     goToPage(0);
+    contentParent.classList.remove("hidden");
 }
 
 const pageContentsDir = "page_contents/";
