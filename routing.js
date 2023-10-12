@@ -10,7 +10,13 @@ async function init() {
     contentParent.classList.add("hidden");
     await load_pages();
     goToPage(0);
+    animateContentParent("fade-in");
     contentParent.classList.remove("hidden");
+}
+
+function animateContentParent(className) {
+    contentParent.classList.remove("fade-in");
+    contentParent.classList.add(className);
 }
 
 const pageContentsDir = "page_contents/";

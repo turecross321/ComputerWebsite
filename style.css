@@ -2,6 +2,7 @@ body {
     background-color: rgb(1, 8, 16);
     font-family: 'Pixelify Sans', cursive;
     color: rgb(185, 222, 181);
+    min-height: 100vh;
 }
 
 #header-and-nav {
@@ -16,15 +17,20 @@ header {
 nav {
     display: flex;
     align-items: center;
-    gap: 2px;
+    gap: 4px;
     overflow-y: auto;
+}
+
+.full-width {
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .vertical-divider {
     background-color: gray;
     width: 1px;
-    margin-left: 4px;
-    margin-right: 4px;
+    margin-left: 2px;
+    margin-right: 2px;
     height: 24px;
 }
 
@@ -56,19 +62,25 @@ button {
     margin: 2px;
 }
 
+.image-container {
+    display: flex;
+    justify-content: center;
+}
+
 .nav-button:hover {
+    filter:brightness(140%)
+}
+
+.nav-button-selected {
     color: rgb(255, 255, 255);
     outline: dotted;
 }
 
-.nav-button-selected {
-    transition: all 125ms;
-    outline: ridge 4px;  
-}
-
 #container {
-    position: relative;
-    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
 #content-parent {
@@ -76,26 +88,24 @@ button {
     margin: 16px;
     display: flex;
     gap: 16px;
-
-    animation-duration: 1000ms;
-    animation-name: slide-in;
-    animation-iteration-count: 1;
 }
 
 .hidden {
     display: none;
 }
 
-@keyframes slide-in {
+.fade-in {
+    animation-duration: 1000ms;
+    animation-name: fade-in;
+    animation-iteration-count: 1; 
+}
+
+@keyframes fade-in {
     from {
-        position: fixed;
-        transform: translateY(100%);
         opacity: 0%;
     }
-    to {
-        transform: translateY(0%);
+    100% {
         opacity: 100%;
-        position: relative  ;
     }
 }
 
@@ -105,27 +115,9 @@ main {
     border-radius: 8px;
 }
 
-#primary-main {
-    width: 100%;
-}
-
 iframe {
     max-width: 100%;
     border-radius: 8px;
-}
-
-footer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    height: 2.5rem;
-    width: 100%;
-    bottom: 0;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    text-align: center;
-    background-color: #000000;
 }
 
 @media screen and (max-width: 600px) {
