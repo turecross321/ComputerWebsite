@@ -83,6 +83,7 @@ button {
     gap: 8px;
 }
 
+
 #content-parent {
     padding-bottom: 2.5rem;
     margin: 16px;
@@ -92,12 +93,6 @@ button {
 
 .hidden {
     display: none;
-}
-
-.fade-in {
-    animation-duration: 1000ms;
-    animation-name: fade-in;
-    animation-iteration-count: 1; 
 }
 
 @keyframes fade-in {
@@ -113,6 +108,10 @@ main {
     background-color: rgb(1, 23, 22);
     padding: 16px;
     border-radius: 8px;
+    animation-timing-function: ease-in;
+    animation-duration: 250ms;
+    animation-name: fade-in;
+    animation-iteration-count: 1; 
 }
 
 iframe {
