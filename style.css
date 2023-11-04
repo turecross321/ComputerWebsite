@@ -12,6 +12,8 @@ body {
 
 header {
     margin-bottom: 8px;
+    font-size: xx-large;
+    font-weight: bold;
 }
 
 nav {
@@ -27,7 +29,7 @@ nav {
 }
 
 .vertical-divider {
-    background-color: gray;
+    background-color: grey;
     width: 1px;
     margin-left: 2px;
     margin-right: 2px;
@@ -36,6 +38,14 @@ nav {
 
 h1, h2, p, body {
     margin: 0;
+}
+
+h1 {
+    font-size: xx-large;
+}
+
+p {
+    font-size: large;
 }
 
 button {
@@ -56,19 +66,19 @@ button {
 
     /* using an outline instead of a border here to the avoid element changing size when
     outline type is changed */
-    outline: solid 1px;
-    outline-color: rgb(137, 190, 31);
+    outline: rgb(137, 190, 31) solid 1px;
     border: none;
     margin: 2px;
 }
 
 .image-container {
     display: flex;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .nav-button:hover {
-    filter:brightness(140%)
+    filter: brightness(140%)
 }
 
 .nav-button-selected {
@@ -91,13 +101,19 @@ button {
     gap: 16px;
 }
 
+a {
+    text-decoration: underline;
+    cursor: pointer;
+    width: fit-content;
+}
+
 .hidden {
     display: none;
 }
 
 @keyframes fade-in {
     from {
-        opacity: 0%;
+        opacity: 0;
     }
     100% {
         opacity: 100%;
@@ -111,7 +127,7 @@ main {
     animation-timing-function: ease-in;
     animation-duration: 250ms;
     animation-name: fade-in;
-    animation-iteration-count: 1; 
+    animation-iteration-count: 1;
 }
 
 iframe {
@@ -119,9 +135,9 @@ iframe {
     border-radius: 8px;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1024px) {
     #content-parent {
         flex-direction: column;
     }
-    
-  }
+
+}

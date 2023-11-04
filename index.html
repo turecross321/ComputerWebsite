@@ -1,33 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link rel="stylesheet" href="style.css" />
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <link rel="stylesheet" href="style.css"/>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Datorns Uppbyggnad</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
     <link
-      href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@500&display=swap"
-      rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@500&display=swap"
+            rel="stylesheet"
     />
     <script src="routing.js"></script>
-  </head>
-  <body onload="init()">
-    <div id="header-and-nav">
-      <header>
-        <h1>Datorns Uppbyggnad</h1>
-      </header>
-      <nav>
+</head>
+<body onload="init()">
+<div id="header-and-nav">
+    <header>
+        <span>Datorns Uppbyggnad</span>
+    </header>
+    <nav>
         <button onclick="goToPage(0)" class="nav-button">Startsida</button>
         <div class="vertical-divider"></div>
         <button onclick="goToPage(1)" class="nav-button">Moderkort</button>
         <button onclick="goToPage(2)" class="nav-button">CPU</button>
-      </nav>
-    </div>
+        <button onclick="goToPage(3)" class="nav-button">GPU</button>
+        <button onclick="goToPage(4)" class="nav-button">RAM</button>
+        <button onclick="goToPage(5)" class="nav-button">SSD & Hårddisk</button>
+        <button onclick="goToPage(6)" class="nav-button">Chassi</button>
+    </nav>
+</div>
 
-    <div id="container">
-      <div id="content-parent"></div>
-    </div>
-  </body>
+<div id="container">
+    <div id="content-parent"></div>
+</div>
+</body>
 </html>
